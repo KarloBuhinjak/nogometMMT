@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nogomet</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .ptr {
+        cursor: pointer;
+      }
+      .soccer-ball {
+        animation-name: soccer-animation;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      @keyframes soccer-animation {
+        0% {
+          top: 0px;
+          left: 100px;
+          transform: rotate(0deg);
+        }
+        25% {
+          top: 20px;
+          left: 250px;
+          transform: rotate(90deg);
+        }
+        50% {
+          top: 60px;
+          left: 120px;
+          transform: rotate(180deg);
+        }
+        75% {
+          top: 50px;
+          left: 30px;
+          transform: rotate(270deg);
+        }
+        100% {
+          top: 0px;
+          left: 100px;
+          transform: rotate(360deg);
+        }
+      }
+      .ball-container {
+        height: 100px;
+        border-radius: 10px;
+      }
+      .soccer-ball {
+        width: 50px;
+        height: 50px;
+        position: relative;
+      }
+      .students-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-primary text-white">
+      <div class="container pb-2">
+        <h1>Nogomet</h1>
+      </div>
+    </header>
+    <main class="container my-3">
+      <div class="row">
+        <div class="col-md-6 row">
+          <div>
+            <h2>Povijest nogometa</h2>
+            <p>
+              Nogomet je nastao u 19. stoljeću u Engleskoj, a brzo se proširio
+              diljem svijeta. Danas se nogomet igra u gotovo svakoj zemlji na
+              svijetu, a Svjetsko prvenstvo u nogometu je jedna od najgledanijih
+              sportskih manifestacija.
+            </p>
+            <h2>Pravila igre</h2>
+            <p>
+              Nogomet se igra dvije momčadi s po jedanaest igrača. Cilj je
+              postići više golova od protivnika tako da se lopta ubaci u
+              protivničku mrežu. Glavni sudac vodi igru, a pomoćni suci pomažu u
+              odlukama o zaleđima, prekršajima i slično.
+            </p>
+            <p>
+              Više o pravilima igre možete saznati na
+              <a
+                href="https://hr.wikipedia.org/wiki/Nogomet#Pravila"
+                target="_blank"
+                >Wikipediji</a
+              >.
+            </p>
+            <h2>Dodatne poveznice</h2>
+            <ul>
+              <li>
+                <a href="https://www.fifa.com/" target="_blank"
+                  >FIFA - Svjetska nogometna federacija</a
+                >
+              </li>
+              <li>
+                <a href="https://www.uefa.com/" target="_blank"
+                  >UEFA - Europska nogometna federacija</a
+                >
+              </li>
+              <li>
+                <a href="https://hns-cff.hr/" target="_blank"
+                  >Hrvatski nogometni savez</a
+                >
+              </li>
+            </ul>
+            <div class="ball-container">
+              <img src="ball-transparent.png" class="soccer-ball" />
+            </div>
+            <div
+              style="text-align: center"
+              class="gif-container row ptr"
+              onclick="toggleContentModal(event)"
+            >
+              <img src="i1.gif" style="max-width: 650px; border-radius: 15px" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-6">
+              <img
+                onclick="toggleContentModal(event)"
+                src="goat.jpg"
+                alt="Nogometna lopta"
+                class="img-fluid ptr mb-5 soccer-img"
+                width="1500"
+                height="1500"
+              />
+            </div>
+            <div class="col-md-6">
+              <img
+                onclick="toggleContentModal(event)"
+                src="camp-nou.webp"
+                alt="Nogometna lopta"
+                class="img-fluid ptr mb-5 soccer-img"
+              />
+            </div>
+            <div class="mb-4">
+              <h4>Svjetsko prvenstvo</h4>
+              <p>
+                FIFA organizira Svjetsko prvenstvo svake četiri godine, dvije
+                godine nakon/prije Olimpijskih igara i UEFA-inog EURO-a. Otvoren
+                je za nacionalne timove diljem svijeta. Do sada se natjecalo
+                između 32 finalista, iako će se taj broj povećati na 48 za
+                natjecanje 2026. koje će se održati u SAD-u, Kanadi i Meksiku.
+              </p>
+            </div>
+            <div
+              class="embed-responsive embed-responsive-16by9"
+              style="
+                padding: 10px;
+                background: #000;
+                webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                border-radius: 20px;
+                width: 560px;
+                margin: 0 auto;
+                overflow: hidden;
+              "
+            >
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/Phnt5QZ7X7o"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <h4 class="mt-5 mb-3 w-100" style="text-align: center">Studenti</h4>
+        <div class="students-container">
+          <div class="mb-3">
+            <img
+              onclick="toggleContentModal(event)"
+              src="buha.jpg"
+              alt="Student 1"
+              class="ptr student-img"
+              data-toggle="modal"
+              data-target="#student1-modal"
+              width="300"
+              height="300"
+            />
+            <p id="imePrezime" data-toggle="modal" data-target="#karloModal">
+              Karlo Buhinjak
+            </p>
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="karloModal"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="karloModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="karloModalLabel">
+                      Karlo Buhinjak
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Datum rođenja: 06.03.2001</p>
+                    <p>
+                      Mjesto rođenja:
+                      <a href="https://www.osijek.hr/" target="_blank"
+                        >Osijek</a
+                      >
+                    </p>
+                    <p>
+                      Osnovna škola:
+                      <a href="http://os-josipovac.skole.hr/" target="_blank"
+                        >OŠ Josipovac</a
+                      >
+                    </p>
+                    <p>
+                      Srednja škola:
+                      <a
+                        href="http://www.gimnazija-prva-os.skole.hr/"
+                        target="_blank"
+                        >I.gimnazija Osijek</a
+                      >
+                    </p>
+                    <p>
+                      Fakultet:
+                      <a href="https://www.ferit.unios.hr/" target="_blank"
+                        >FERIT Osijek</a
+                      >
+                    </p>
+                    <p>
+                      <a href="" target="_blank"
+                        >Bavim li se ja samo ovim sportom ili ga samo volim?</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal -->
+          </div>
+          <div class="mb-3">
+            <img
+              onclick="toggleContentModal(event)"
+              src="https://via.placeholder.com/300x300"
+              alt="Student 2"
+              class="ptr student-img"
+              data-toggle="modal"
+              data-target="#student2-modal"
+            />
+            <p id="imePrezime" data-toggle="modal" data-target="#hrvojeModal">
+              Hrvoje Ćosić
+            </p>
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="hrvojeModal"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="hrvojeModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="hrvojeModalLabel">
+                      Hrvoje Ćosić
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <!-- tu samo nadodaj svoje podatke -->
+                  <div class="modal-body">
+                    <p>Datum rođenja: -</p>
+                    <p>
+                      Mjesto rođenja:
+                      <a href="-" target="_blank">-</a>
+                    </p>
+                    <p>
+                      Osnovna škola:
+                      <a href="-" target="_blank">-</a>
+                    </p>
+                    <p>
+                      Srednja škola:
+                      <a href="-" target="_blank">-</a>
+                    </p>
+                    <p>
+                      Fakultet
+                      <a href="https://www.ferit.unios.hr/" target="_blank"
+                        >FERIT Osijek</a
+                      >
+                    </p>
+                    <p>
+                      <a href="" target="_blank"
+                        >Bavim li se ja samo ovim sportom ili ga samo volim?</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal -->
+          </div>
+        </div>
+      </div>
+      <button
+        id="img-modal-btn"
+        class="d-none"
+        data-toggle="modal"
+        data-target="#imagemodal"
+      ></button>
+      <div
+        class="modal fade"
+        id="imagemodal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="myModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">&times;</span
+                ><span class="sr-only">Close</span>
+              </button>
+              <img src="" class="imagepreview" style="width: 100%" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="mt-5 text-right text-lg-start bg-white text-muted">
+      <div
+        class="text-right p-3"
+        style="
+          background-color: rgba(0, 0, 0, 0.025);
+          font-size: small;
+          line-height: 5px;
+        "
+      >
+        <p>
+          <a style="color: black" href="https://www.ferit.unios.hr/"
+            >Fakultet elektrotehnike, računarstva i informacijskih tehnologija
+            Osijek</a
+          >
+        </p>
+        <p>
+          <a
+            style="color: black"
+            href="https://www.ferit.unios.hr/upisi-i-studiji/preddiplomski-strucni-studiji#racunarstvo#SR601"
+            >Multimedijska tehnika</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function toggleContentModal(e) {
+      const preview = document.querySelector(".imagepreview");
+      preview.src = e.target.src;
+      document.querySelector("#img-modal-btn").click();
+    }
+  </script>
+</html>
